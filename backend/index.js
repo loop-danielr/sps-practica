@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const port = 3307;
+const port = process.env.BACK_PORT;
 
 app.use(cors());
 app.use(express.json());
@@ -13,5 +13,5 @@ app.use(express.json());
 app.use('/habilidad', HablidadController);
 
 app.listen(port, () => {
-    console.log(`Server on port ${port}`)
+    console.log(`-- EXPRESS SERVER LISTENING ON PORT ${port} --`)
 });
