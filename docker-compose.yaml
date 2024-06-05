@@ -1,0 +1,9 @@
+services:
+  db:
+    container_name: db-mysql
+    image: mysql:lts
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - '3306:3306'
