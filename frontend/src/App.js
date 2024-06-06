@@ -1,16 +1,21 @@
 import Box from '@mui/material/Box';
 
-import HomeList from './component/Home/HomeList';
+import HomeList from './components/HomeList';
+import { Button } from '@mui/material';
 
 function App() {
+  const styleBox = {
+    display: 'flex',
+      width: '100vw',
+      height: '100vh',
+      justifyContent: 'center',
+      alignItems: 'center',
+      bgcolor:'#34495E'
+  }
+
   return (
     <Box
-      display={'flex'}
-      width={'100vw'}
-      height={'100vh'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      bgcolor={'gray'}
+      sx={{...styleBox}}
     >
       <HomeList/>
     </Box>
