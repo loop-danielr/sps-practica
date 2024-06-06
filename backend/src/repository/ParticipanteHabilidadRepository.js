@@ -6,27 +6,9 @@ class ParticipanteHabilidadRepository {
 
     getByParticipanteId(participanteId) {
         return new Promise((resolve, reject) => {
-            db.query("SELECT * FROM participante_habilidad WHERE participante_id=?",[participanteId] , (err, rows) => {
+            db.query("SELECT ph.id as id, h.nombre as nombre FROM participante_habilidad ph INNER JOIN habilidad h ON ph.habilidad_id = h.id WHERE ph.participante_id=?",[participanteId] , (err, rows) => {
                 if (err) return reject(err);
                 resolve(rows);
-            });
-        });
-    }
-
-    post(participanteId, habilidadId) {
-        return new Promise((resolve, reject) => {
-            db.query("INSERT INTO participante_habilidad (participante_id, habilidad_id) VALUES (?, ?)",[participanteId, habilidadId] , (err, rows) => {
-                if (err) return reject(err);
-                resolve(rows.insertId);
-            });
-        });
-    }
-
-    delete(participanteId) {
-        return new Promise((resolve, reject) => {
-            db.query("DELETE FROM participante_habilidad WHERE participante_id=?",[participanteId] , (err, rows) => {
-                if (err) return reject(err);
-                resolve(rows.affectedRows);
             });
         });
     }

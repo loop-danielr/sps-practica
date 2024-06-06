@@ -1,4 +1,3 @@
-const HablidadController = require('./src/controller/HabilidadController.js');
 const ParticipanteController = require('./src/controller/ParticipanteController.js');
 const ParticipanteHabilidadController = require('./src/controller/ParticipanteHabilidadController.js');
 
@@ -15,7 +14,6 @@ app.use(cors());
 app.use(express.json());
 
 // Rutas habilitadas por el controlador
-app.use('/habilidad', HablidadController);
 app.use('/participante', ParticipanteController);
 app.use('/participanteHabilidad', ParticipanteHabilidadController);
 
