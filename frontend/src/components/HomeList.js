@@ -40,7 +40,7 @@ function HomeList() {
   const [participantes, setParticipantes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3307/participante")
+    fetch("http://ec2-3-131-158-117.us-east-2.compute.amazonaws.com:3307/participante")
       .then((res) => res.json())
       .then((data) => setParticipantes(data));
   }, []);

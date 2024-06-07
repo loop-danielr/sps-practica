@@ -34,7 +34,7 @@ function DetallesModal({ nombre, participanteId, fecha, hora }) {
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => {
-        fetch("http://localhost:3307/participanteHabilidad/byParticipanteId", {
+        fetch("http://ec2-3-131-158-117.us-east-2.compute.amazonaws.com:3307/participanteHabilidad/byParticipanteId", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ participanteId })

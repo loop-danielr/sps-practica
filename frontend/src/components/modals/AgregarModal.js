@@ -64,7 +64,7 @@ function AgregarModal({ handleParticipantesChange }) {
         else if (apellido1 == '') window.alert('El campo Primer Apellido esta vacio');
         else if (apellido2 == '') window.alert('El campo Segundo Apellido esta vacio');
         else {
-            fetch("http://localhost:3307/participante", {
+            fetch("http://ec2-3-131-158-117.us-east-2.compute.amazonaws.com:3307/participante", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(
