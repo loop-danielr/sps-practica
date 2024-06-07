@@ -8,7 +8,6 @@ CREATE TABLE participante (
 	apellido_1 VARCHAR(32) NOT NULL,
 	apellido_2 VARCHAR(32) NOT NULL,
 	fecha DATETIME NOT NULL,
-	fotografia TEXT,
 	PRIMARY KEY (id)
 );
 
